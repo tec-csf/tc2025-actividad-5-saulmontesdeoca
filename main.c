@@ -124,12 +124,7 @@ int main(int argc, char const *argv[])
             // Si es el proceso padre escribe la primera vez el testigo
             if (i == 1)
             {
-                // Cerramos read de la primera tuberia
-                // close(tuberia[0]);
-                // Escribimos en la primera tuberia
-                // write(tuberia[1], &testigo, sizeof(char));
-                // printf("—-> Soy el proceso %d con PID %d  y recibí el testigo '%c', el cual tendré por 5 segundos\n", i, getpid(), input);
-                // printf("Soy el proceso con PID = %d y envío '%c'\n", pid, input);
+                // Guardando los pids de child processes para esperarlos despues
                 *aux = pid;
             }
         }
